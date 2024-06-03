@@ -4,4 +4,4 @@ hosts:
 gateways:
   - istio-system/nonprod-eu-central-1-cdicohorts-thirteen-com-gateway
 image:
-  tag: dev.51565ac
+  tag: dev.6933ef4
