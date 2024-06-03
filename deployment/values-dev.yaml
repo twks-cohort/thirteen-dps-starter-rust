@@ -1,7 +1,7 @@
 ---
 hosts:
-  - basic-bot-dev.prod-us-east-1.twdps.io 
+  - basic-bot-dev.nonprod-eu-central-1.cdicohorts-thirteen.com
 gateways:
-  - istio-system/prod-us-east-1-twdps-io-gateway
+  - istio-system/nonprod-eu-central-1-cdicohorts-thirteen-com-gateway
 image:
   tag: dev.51565ac

@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs:
-  rust: twdps/rust-api@2.11.0
+  rust: twks-cohort/rust-api@1.0.0
   cosign: twdps/cosign@0.1.0
   kube: twdps/kube-ops@0.3.0
   op: twdps/onepassword@1.0.0
@@ -14,7 +14,7 @@ parameters:
   context:
     description: circleci context for all jobs
     type: string
-    default: twdps-core-labs-team
+    default: cohorts-global
   shell-options:
     description: shell options for all jobs
     type: string
@@ -26,7 +26,7 @@ parameters:
   executor-image:
     description: image to use for local jobs
     type: string
-    default: twdps/circleci-kube-ops:alpine-0.7.0
+    default: twdps/circleci-kube-ops:alpine-6.0.0
 
 # ==== triggers 
 
@@ -105,7 +105,7 @@ workflows:
           context: << pipeline.parameters.context >>
           shell:  op run --env-file op.nonprod.env -- /bin/bash -eo pipefail
           name: Deploy to Dev Namespace
-          cluster: prod-us-east-1
+          cluster: sandbox-eu-central-1
           environment: dev
           source-env: op.nonprod.env
 
